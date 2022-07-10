@@ -175,7 +175,7 @@ impl<'a> Analyzer<'a> {
             self.wrap()?;
             let w = &mut self.write_to;
 
-            writeln!(w, "Total links:")?;
+            writeln!(w, "Total links: {total}")?;
             writeln!(w, "# Top users sending links:\n")?;
 
             for (k, v) in users.into_iter().rev().take(self.take_num) {
